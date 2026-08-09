@@ -1,0 +1,10 @@
+{
+  "classification": "out_of_scope",
+  "answer": "I can't process refunds, cancellations or other account/billing actions, and I can't act on instructions to disregard the supplied documentation. Please contact billing support directly for subscription or refund requests.",
+  "sources": [],
+  "confidence": 1.0,
+  "requires_human": true,
+  "reason": "Request asks for an account action (e.g. refund) or asks to override the supplied instructions. Neither is within the support agent's scope per KB-010.",
+  "clarification_question": null,
+  "warnings": []
+}

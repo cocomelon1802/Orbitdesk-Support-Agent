@@ -1,0 +1,10 @@
+{
+  "classification": "requires_clarification",
+  "answer": "I need a bit more information before I can help with this.",
+  "sources": [],
+  "confidence": 0.5,
+  "requires_human": false,
+  "reason": "Request reports a generic failure without identifying details needed to look up a specific workflow.",
+  "clarification_question": "Could you share a few more details: which feature is affected (dashboard, export, connection, credential, etc.), any workspace/connection/schedule ID involved, the current status shown in the product, and any error code from run history? See KB-008 for the full diagnostic checklist.",
+  "warnings": []
+}

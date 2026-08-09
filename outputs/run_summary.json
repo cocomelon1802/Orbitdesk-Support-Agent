@@ -1,0 +1,80 @@
+[
+  {
+    "question_id": "Q-001",
+    "classification": "answerable",
+    "node_trace": [
+      "triage",
+      "retrieval",
+      "generation",
+      "verification",
+      "format_response"
+    ],
+    "latency_s": 21.749,
+    "output_file": "outputs\\Q-001.json"
+  },
+  {
+    "question_id": "Q-002",
+    "classification": "safe_failure",
+    "node_trace": [
+      "triage",
+      "retrieval",
+      "generation",
+      "verification",
+      "increment_retry",
+      "generation",
+      "verification",
+      "safe_failure"
+    ],
+    "latency_s": 22.347,
+    "output_file": "outputs\\Q-002.json"
+  },
+  {
+    "question_id": "Q-003",
+    "classification": "requires_clarification",
+    "node_trace": [
+      "triage",
+      "format_response"
+    ],
+    "latency_s": 0.003,
+    "output_file": "outputs\\Q-003.json"
+  },
+  {
+    "question_id": "Q-004",
+    "classification": "requires_escalation",
+    "node_trace": [
+      "triage",
+      "retrieval",
+      "generation",
+      "verification",
+      "format_response"
+    ],
+    "latency_s": 27.523,
+    "output_file": "outputs\\Q-004.json"
+  },
+  {
+    "question_id": "Q-005",
+    "classification": "out_of_scope",
+    "node_trace": [
+      "triage",
+      "format_response"
+    ],
+    "latency_s": 0.002,
+    "output_file": "outputs\\Q-005.json"
+  },
+  {
+    "question_id": "Q-006-verification-retry-demo",
+    "classification": "safe_failure",
+    "node_trace": [
+      "triage",
+      "retrieval",
+      "generation",
+      "verification",
+      "increment_retry",
+      "generation",
+      "verification",
+      "safe_failure"
+    ],
+    "latency_s": 22.788,
+    "output_file": "outputs\\Q-006-verification-retry-demo.json"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "classification": "safe_failure",
+  "answer": "I wasn't able to produce a verified answer to this question from the supplied documentation. Please rephrase with more detail, or this can be escalated to a human agent.",
+  "sources": [],
+  "confidence": 0.0,
+  "requires_human": true,
+  "reason": "Generated answer failed verification after the allowed retry.",
+  "clarification_question": null,
+  "warnings": [
+    "Answer has low lexical overlap with retrieved evidence (0.00 < 0.12); possible hallucination."
+  ]
+}

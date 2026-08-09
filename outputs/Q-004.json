@@ -1,0 +1,43 @@
+{
+  "classification": "requires_escalation",
+  "answer": "Next steps:\n1. Verify the scheduled export runs.\n2. Check the connection refresh times.\n3. Ensure the destination is verified and accessible.\n4. Review the error codes and error messages.\n5. Attempt to resolve any issues identified through these steps.\n6. If necessary, escalate the issue to the Rendering team for further investigation and resolution.",
+  "sources": [
+    {
+      "source_id": "CASE-1103",
+      "passage": "Title: Repeated render failures after documented checks\nStatus: escalated\nSymptoms: Two consecutive runs showed render_failed; Dashboard opened successfully; Connections and destination were active\nResolution steps: Collected workspace ID, dashboard ID, schedule ID, run IDs and timestamps; Escalated"
+    },
+    {
+      "source_id": "KB-004",
+      "passage": "## Common Error Codes\n\n- `source_refresh_timeout`: A required connection did not finish refreshing within 15 minutes. The export is not retried automatically.\n- `destination_unverified`: Delivery is blocked until the destination is verified.\n- `owner_access_revoked`: The schedule owner no longer has"
+    },
+    {
+      "source_id": "KB-004",
+      "passage": "## Troubleshooting a Missed Export\n\nCheck the following in order:\n\n1. Confirm the schedule state and next-run time.\n2. If the workspace timezone recently changed, follow `KB-003` and resave the schedule.\n3. Open **Schedule > Run history** and note the latest run status and error code.\n4. Confirm tha"
+    },
+    {
+      "source_id": "CASE-1072",
+      "passage": "Title: Export failed while a connection refresh was still running\nStatus: resolved\nSymptoms: Run history showed source_refresh_timeout; Connection refresh completed 19 minutes after the export start time\nResolution steps: Confirmed that exports wait up to 15 minutes for required refreshes; Admin adj"
+    },
+    {
+      "source_id": "KB-008",
+      "passage": "## Escalation Conditions\n\n- Two consecutive `render_failed` events for the same dashboard after documented checks\n- Two repeated `connector_internal_error` failures\n- Suspected credential exposure\n- Billing actions, ownership disputes or legal requests\n- A reproducible error not described in the cur"
+    },
+    {
+      "source_id": "KB-008",
+      "passage": "## Information to Collect\n\nInclude only information relevant to the failure:\n\n- Workspace ID\n- Affected object ID, such as a schedule, dashboard, connection or credential ID\n- Exact error code and visible error message\n- Timestamps with timezone\n- Relevant run, refresh or request IDs\n- Reproduction "
+    },
+    {
+      "source_id": "CASE-1089",
+      "passage": "Title: Scheduled email export blocked for a new domain\nStatus: resolved\nSymptoms: Run history showed destination_unverified; Recipients used a newly added external email domain\nResolution steps: Owner resent the destination-verification link; Owner completed verification within 24 hours; Analyst use"
+    },
+    {
+      "source_id": "KB-006",
+      "passage": "## Refresh Behaviour\n\nOnly one refresh can run for a connection at a time. A second request returns `refresh_already_running`. Scheduled exports wait up to 15 minutes for required refreshes. If a refresh takes longer, the export run ends with `source_refresh_timeout` even if the refresh later succee"
+    }
+  ],
+  "confidence": 0.75,
+  "requires_human": true,
+  "reason": "Request indicates documented checks were already completed and the issue persists, matching the escalation criteria in KB-008.",
+  "clarification_question": null,
+  "warnings": []
+}
